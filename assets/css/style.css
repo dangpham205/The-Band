@@ -125,7 +125,7 @@ html{
     position: relative;
     margin-top: 46px; /*de slider khong chiem luon header, vi khi header fixed thi header se noi len, va slider se chiem luon cho do*/
     padding-top: 50%; /*chieu cao = 50% chieu ngang cua chinh no*/
-    background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
+    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
 }
 #slider .text-content {
     position: absolute;
