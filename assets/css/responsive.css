@@ -1,0 +1,85 @@
+@media (max-width:63.9375em){      /*tablet và mobile*/
+    .place-btn{
+        padding: 15px 16px;
+    }
+    #nav .subnav a{
+        padding: 5px 12px;
+    }
+    .user-form .form-control{
+        padding: 15px;
+        font-size: 16px;
+    }
+    .social-list{
+        font-size: 48px;
+    }
+    .social-list a{
+        margin: 0 8px;
+    }
+    .copyright a{
+        padding: 12px 0;
+        display: inline-block;
+    }
+    .contact-info{
+        line-height: 2;
+    }
+}
+
+@media (min-width:46.25em) and (max-width:63.9375em){ /*tablet*/
+
+}
+
+
+@media (max-width:46.1875em) {  /*responsive mobile*/
+    .s-col-full{        /*chỉ khi nào ở mobile thì s-col-full mới có tác dụng vì chỉ định nghĩa trong đây*/
+        width: 100% !important;
+    }
+    .s-full-width{      /*#59 giống bên trên nhưng để xài cho nút send thì nút kh phải là cột, nên tạo thêm cái nì để clean hơn*/
+        width: 100% !important;
+    }
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #nav{
+        display: block; /*khắc phục lỗi menu item không 100% chiều ngang nên không bấm đc nếu kh bấm thẳng vào chữ*/
+    }   /*sửa: block có tc sẽ kế thừa width của th cha chứa nó, sẽ xảy ra lỗi đá nút menu xuống dưới header vì ul lúc này chiếm hết r*/
+
+    #nav > li {         /*để menu hiện dọc chứ kh ngang như pc*/
+        display: block;
+    }
+    #nav li a{
+        padding: 1px 24px;
+    }
+    #nav > li:first-child{ /*#56 khi set thành block ở trên thì home cũng sẽ 100% width, chỉnh riêng home thành inbl để chỉ có 1 ô*/
+        display: inline-block;
+    }
+
+    #nav .subnav{
+        position: initial; /*#57 đè lên absolute ở pc, hiện ra subanv khi bấm vào more */
+        background: #333; 
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px; /*#57 cách subnav vô 1 đoạn nhìn cho giống con của more*/
+    } /*5px để cho height bự hơn, dễ bấm, nên từ 42PX ĐẾN 48PX*/
+    #header .search-btn {   /*khi ở mobile thì kh hiện nút search*/
+        display: none;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+
+    #content .member-item{ /*58*/
+        margin-top: 30px;
+        width: 100%;
+    }
+    #content .member-img{
+        width: 60%;
+    }
+
+    .user-form{         /*đẩy phần điền tt cách xa info ra*/
+        margin-top: 32px;
+    }
+}

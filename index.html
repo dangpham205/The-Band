@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band by Hai Dang</title>
-    <link rel="icon" href="https://image.flaticon.com/icons/png/512/1235/1235131.png" type="image/x-icon" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4213/4213598.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">  <!--must put the responsive below the style.css so it can affect-->
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+
 </head>
 <body>
     <div id="wrapper">   <!--co the ten la main, dung de bao boc ca trang web-->
@@ -34,6 +36,10 @@
             <!--begin search-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!--end search-->
         </div>
@@ -82,31 +88,31 @@
                     </ul>
                     <!--place-->
                     <div class="places row">
-                        <div class="col-3 col " >  <!--class cu place-item-->
+                        <div class="col-3 col mt-16 s-col-full " >  <!--class cu place-item--> <!--s-col-full là xài cho mobile #58-->
                             <img src="./assets/img/place/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-head">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-info">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn place-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn place-btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-3 col">  <!--class cu place-item-->
+                        <div class="col-3 col mt-16 s-col-full">  <!--class cu place-item-->
                              <img src="./assets/img/place/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-head">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-info">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn place-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn place-btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-3 col">  <!--class cu place-item-->
+                        <div class="col-3 col mt-16 s-col-full">  <!--class cu place-item-->
                              <img src="./assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-head">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-info">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn place-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn place-btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -118,27 +124,27 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="col col-2 contact-info">
-                        <p><i class="ti-location-pin"></i>Chicago, US</p> <!--de noi dung ngoai the i-->
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    <div class="col col-2 contact-info s-col-full">
+                        <p><i class="ti-location-pin"></i>Gò Zấp, US</p> <!--de noi dung ngoai the i-->
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:113">1900100nhớ</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:haidawng205@gmail.com">thích thì mail@zo</a></p>
                     </div>
-                    <div class="col col-2 user-form ">
+                    <div class="col col-2 user-form  s-col-full">
                         <form action="">
                             <div class="row">
-                                <div class="col col-2">
-                                    <input type="text" name="" id="" class="form-control" placeholder="Name" required> <!--required la bat buoc phai nhap vo-->
+                                <div class="col col-2 s-col-full">
+                                    <input type="text" name="" class="form-control" placeholder="Name" required> <!--required la bat buoc phai nhap vo-->
                                 </div>
-                                <div class="col col-2">
-                                    <input type="email" name="" id="" class="form-control" placeholder="Email" required>
+                                <div class="col col-2 s-col-full s-mt-8">
+                                    <input type="email" name="" class="form-control" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="row mt-8">
                                 <div class="col col-full">
-                                    <input type="text" name="" id="" class="form-control" placeholder="Message" required>
+                                    <input type="text" name="" class="form-control" placeholder="Message" required>
                                 </div>
                             </div>
-                            <input class="contact-submit mt-16 " type="submit" value="SEND">
+                            <input class="contact-submit mt-16 s-full-width " type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -182,7 +188,7 @@
                     <i class="ti-shopping-cart"></i>
                     Tickets, $15 per person
                 </label>            <!--khi bam vo label se cho phep ng dung dien vo input-->
-                <input id="quantity" type="text" class="modal-input" placeholder="How many?">
+                <input id="quantity" type="text" class="modal-input" placeholder="How many?"> <!--id thang se ghi input vo ne-->
 
                 <label for="modal-email" class="modal-label">
                     <i class="ti-user"></i>
@@ -218,7 +224,44 @@
         }
         modalclose.addEventListener('click',offbuymodal)
         modal.addEventListener("click",offbuymodal)
-        modalcontainer.addEventListener('click', function (event) { event.stopPropagation() }) //sau .funtion co ()
+        modalcontainer.addEventListener('click', function (event) { 
+            event.stopPropagation() }) //sau .funtion co ()
+        /*ngưng việc nổi bọt, khi bấm vào model-cointainer thì không bị tắt đi*/
+
+
+    //lay event khi bam vao nut menu tren mobile
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight= header.clientHeight    //lấy gtri height đã css
+
+        //open n close mobile menu
+        mobileMenu.onclick = function(){    //chay khi click vao mobile menu
+            //var isClosed = header.clientHeight === 46; //check xem height dang 46px hay khong, 46 la dang dong, khong nen so sanh voi 46 vi khi header height khac 46(vd 47) thi se khong chay dc code nay
+            var isClosed = header.clientHeight === headerHeight; //nếu gtri height ở hiện tại bằng với gtri height đã css --> đang close
+            if (isClosed){
+                header.style.height ='auto';
+            }
+            else{
+                header.style.height=null  //khi tat thì sẽ set bằng null, thì 46 trong css sẽ có tác dụng
+            }
+        }
+
+        //auto close when choose from menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]'); //dung` '' roi thi ben trong phai dung ""
+        for (var i=0; i < menuItems.length ; i++){
+            var menuItem = menuItems[i]            
+            menuItem.onclick = function(){
+                var isParentMenu= this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                //#57 sửa lỗi bấm vô more bị tắt menu, về lại home 
+                //sau khi bấm vô menu item thì check coi có sibling cùng cấp kh và sibling đó có phải subnav kh
+                if (isParentMenu){ //nếu không có ace là subnav thì đóng sau khi bấm vô menu item
+                    event.preventDefault() //#57 bỏ qua việc bấm vô more bị trôi lên home (bỏ qua href="#") của more
+                } //ban đầu là !isParentMenu thì set bằng null, nhưng JS nên tránh để đk !, nên để isParentMenu và swap 2 dòng code
+                else{
+                    header.style.height= null
+                }
+            }
+        }
     </script>
     
 </body>

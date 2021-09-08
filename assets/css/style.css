@@ -105,14 +105,38 @@ html{
 #nav .more-down-icon{
     font-size: 14px;
 }
+
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 21px;
     cursor: pointer; /*cursor mac dinh la chi hien thi khi de chuot vo nen kh can de vo hover cung dc, nhg de vo hover thi ro y hon*/
+
 }
+
+#header .mobile-menu-btn{
+    display: none; /*khi ở pc thì ẩn nút menu*/
+    position: absolute; /*sửa lỗi nút menu bị đá xuống dưới, cho làm absolute để di chuyển dựa vô thẻ cha*/
+    top: 0;     /*cho nút menu dính lên mép trên phải*/
+    right: 0; 
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+
+}
+
 #header .search-btn:hover {
     background-color: #f44336;
+    cursor: pointer;
 }
+
+#header .menu-icon,
 #header .search-icon{
     color:white;
     font-size: 20px;
@@ -141,6 +165,7 @@ html{
 #slider .text-describe {
     font-size: 15px;
     margin-top: 25px;
+    text-shadow: 0 0 1px black; /*62 làm cho chữ trong slider có bóng dễ đọc hơn*/
 }
 
 
@@ -150,9 +175,12 @@ html{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;   /*responsive tablet, dòng này mạnh hơn dòng trên, khi ở tablet kh đủ 800px thì sẽ set thành 100%*/
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;     /*responsive tablet, khi làm row thì ở trên thì -8px nên phải sửa lại*/
+    padding-right: 16px;   /*responsive tablet*/
 }
 #content .section-heading{
     text-align: center;
@@ -202,7 +230,7 @@ html{
     color: #757575;
     font-size: 15px;
     padding: 11px 16px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;    /*tạo ra đường ngăn giữa các dòng*/
     list-style-type: none;
 }
 .ticket-list .soldout{
@@ -217,7 +245,7 @@ html{
     height: 24px;
     background-color: #000;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 50%;  /*tạo hình tròn*/
     text-align: center;
     line-height: 24px;
     margin-top: -3px;
@@ -225,7 +253,7 @@ html{
 
 .places{
     /*margin: 32px -8px 0;*/
-    margin-top: 32px;
+    margin-top: 16px; /*#58 để 16 th còn bên kia trong các place thì nhét thêm class mt-16 (ban đầu là 32)*/
     padding-bottom: 15px;
 }
 /* .place-item{
@@ -266,6 +294,8 @@ html{
     display: inline-block;
     border: none;
     cursor: pointer;
+    appearance: none;           /*#61 trên mobile thì các trình duyệt sẽ có css cho các nút thì nên set thành none, áp dụng css của mình th*/
+    -webkit-appearance: none;   /*này dành cho iphone safari, còn dòng trên xài cho các trình duyệt khác*/
 }
 .place-btn:hover {
     color: #000;
@@ -294,8 +324,20 @@ html{
     max-width: calc(100%-32px);
     min-height: 200px;
     position: relative;
-    animation: modalFadein ease 0.4s;
+    animation: modalFadein ease 0.4s;  /*create animation wen open the model*/
 }
+
+@keyframes modalFadein{
+    from {
+        opacity: 0;  /*from freakin invisible*/
+        transform: translateY(-400px);
+    }
+    to{
+        opacity: 1; /*to clear n shoulder*/
+        transform: translateY(0);
+    }
+}
+
 .modal .modal-close{
     font-size: 12px;
     position: absolute;
@@ -331,7 +373,7 @@ html{
 }
 
 .modal .modal-label{
-    display: block;
+    display: block;  /*cho dòng chữ nằm thành 1 block,It starts on a new line, and takes up the whole width*/
     font-size: 15px;
     margin-bottom: 12px;
     font-weight: bold;
@@ -369,16 +411,7 @@ html{
     color: #2196f3;
 }
 
-@keyframes modalFadein{
-    from {
-        opacity: 0;
-        transform: translateY(-400px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 .contact-content{
     margin-top: 48px;
@@ -389,9 +422,18 @@ html{
     line-height: 1.5;
 
 }
-.contact-info i[class*="ti-"]{
+.contact-info a{
+    color: #101aef;
+    opacity: 0.7;
+}
+.contact-info a:hover{
+    opacity: 1;
+}
+
+
+.contact-info i[class*="ti-"]{   /*select các i có class="ti-"*/
     width: 30px;
-    display: inline-block;
+    display: inline-block; /*tao khoang cach giua icon va chu*/
 }
 .user-form{
     font-size: 15px;
